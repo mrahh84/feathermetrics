@@ -71,4 +71,12 @@ class FlockViewSet(viewsets.ModelViewSet):
             if serializer.is_valid():
                 serializer.save(flock=flock)
                 return Response(serializer.data, status=201)
-            return Response(serializer.errors, status=400) 
+            return Response(serializer.errors, status=400)
+
+class SaleViewSet(viewsets.ModelViewSet):
+    queryset = Sale.objects.all()
+    serializer_class = SaleSerializer
+
+class ExpenseViewSet(viewsets.ModelViewSet):
+    queryset = Expense.objects.all()
+    serializer_class = ExpenseSerializer 
