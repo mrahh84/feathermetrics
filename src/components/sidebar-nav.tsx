@@ -5,6 +5,7 @@ import {
   DollarSign,
   ShoppingCart,
   BookOpen,
+  UserIcon,
 } from 'lucide-react';
 import Link from 'next/link';
 import { useParams, useRouter } from "next/navigation";
@@ -76,6 +77,14 @@ export function SidebarNav() {
               <SidebarMenuButton tooltip="Expenses">
                 <ShoppingCart />
                 Expenses
+              </SidebarMenuButton>
+            </Link>
+          </SidebarMenuItem>
+          <SidebarMenuItem>
+            <Link href="/customers" passHref legacyBehavior>
+              <SidebarMenuButton tooltip="Customers">
+                <UserIcon />
+                Customers
               </SidebarMenuButton>
             </Link>
           </SidebarMenuItem>
